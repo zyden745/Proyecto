@@ -97,5 +97,24 @@ public class Animal extends Especie{
     public void setPeso(float peso) {
         this.peso = peso;
     }
+ public void agregaVeterinario(List<Animal>ListAnimal,int id, String nombre, String especie, String veterinarioAsignado, String tipoAlimentacion, String area, int edad, char genero, float peso) {
+         
+        ListAnimal.add(new  Animal(id, nombre, especie, veterinarioAsignado, tipoAlimentacion, area, edad, genero, peso));
+    }
+    
+   
+    
+    public int buscaVeterinario(List<Animal>ListAnimal,int id ){
+        for(int i = 0; i < ListAnimal.size(); i++){
+            if(ListAnimal.get(i).getId()== id){
+              return i;
+            }//Cierre if
+        }//Cierre for
+        return -1;
+    }//Cierre buscaVeterinario 
+    
+    
 
+
+    
 }
